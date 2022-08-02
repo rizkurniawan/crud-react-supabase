@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// import screen
+import List from "./screen/List";
+import Tambah from "./screen/Tambah";
+import Ubah from "./screen/Ubah";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<List />} />
+        <Route path="tambah" element={<Tambah />} />
+        <Route path="ubah/:id" element={<Ubah />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
