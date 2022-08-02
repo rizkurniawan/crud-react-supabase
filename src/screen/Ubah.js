@@ -12,18 +12,18 @@ function Ubah() {
 
   useEffect(() => {
     getData();
-  }, [])
+  }, []);
 
-  const getData = async() => {
+  const getData = async () => {
     const { data, error } = await supabase
-    .from("mahasiswa")
-    .select()
-    .eq("id", param.id)
-    .single();
+      .from("mahasiswa")
+      .select()
+      .eq("id", param.id)
+      .single();
     setNim(data.nim);
     setNama(data.nama);
     setProdi(data.prodi);
-  }
+  };
 
   // update data to db
   const onUpdate = async () => {

@@ -47,9 +47,11 @@ function List() {
               <td>{value.prodi}</td>
               <td>
                 <Link to={"ubah/" + value.id}>Ubah</Link>
-                <button onClick={() => {
-                  window.confirm("Anda Yakin?" && onDelete(value.id));
-                }}>
+                <button
+                  onClick={() => {
+                    window.confirm("Anda Yakin?" && onDelete(value.id));
+                  }}
+                >
                   Hapus
                 </button>
               </td>
