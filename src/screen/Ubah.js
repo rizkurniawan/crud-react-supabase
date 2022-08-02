@@ -12,7 +12,7 @@ function Ubah() {
 
   useEffect(() => {
     getData();
-  })
+  }, [])
 
   const getData = async() => {
     const { data, error } = await supabase
